@@ -1,0 +1,7 @@
+Get info about voting options and shit
+https://lgbtplusme.com/_next/data/dIal352h5jz36HzbraczN/pl/ranking/pl/evaluation/A4pVVEe2LfYY8X5R5VHud.json?country=pl&schoolId=A4pVVEe2LfYY8X5R5VHud
+
+Post request
+https://europe-west3-lgbtplusme-production.cloudfunctions.net/createReview
+
+{"data":{"countryId":"pl","rankingId":"4JHCv47LIvX7kfc_6mhie","schoolId":"A4pVVEe2LfYY8X5R5VHud","answers":[0,2,0,0,0,1,1,0,2,2,2,2,2,2,2,0,0,0,0,1,0,0,1,0,1,1],"recaptcha":"03AFcWeA68kEAdhPOPscUaJMrrxgaligN9u1TyhXA7CFPuAz9_3u_DK4q51lKCsGsaQeIXAj4PX3qyh_ViyTflFHlU1An-rlDOyElJAOed_NG31FQw-Yzk41Qgq0ultNQII-WcwOG_t3bJXUn3ytS-hpPcRGli3KI52ZBXM5UjrEo7k3Ix4VHOh_OYxt81TpD1XzfM7BV4sM628xvyUy7tSpm-lKEpXAxwSapD-oClRVFD8Mqh4YO0l0Uz3095VL5I6fqFXxq0kId5ybAweYgHc_VghGWSZiHqHbgMEsoBfYbOTi67EPE-6nEPCOUqK3-Rhib1gwTV_45T9lU4tR8MrHQ-rMWsKrzDRR3gCrkG6H4syMOUJLrYrGQDWulE1LVuISg0lRQKHPj1Qy-0Qg8Y7pZyxaVmDSOhMtdDFRAJRs7jhR_AK3_SGnSu-wVUQDR6IH7LLyQza08H5O5G9n2VSYpwivX22XQY4X2XqSkziGH9CAV-qID_N2Ady8KpxgykAWyAsUrsklQefnPZNWT-vkEd3BvhEY-OqMacADrk15_1FX_95sDxGj1ExB4mnJBpjwrUiH1hLVWeD7A5sXKhMuHV8HRh8aZoIDLWfln59vzJZeGyDSeH7GQ"}}
