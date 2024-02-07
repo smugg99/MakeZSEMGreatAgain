@@ -1,7 +1,10 @@
+import os
 import asyncio
 import random
 import string
 from playwright.async_api import async_playwright
+
+HEADLESS_MODE = os.getenv("HEADLESS").lower() == "true" or False
 
 async def generate_random_user_agent():
     browser = random.choice(["Chrome", "Firefox", "Safari", "Edge"])
@@ -9,22 +12,22 @@ async def generate_random_user_agent():
     version = '.'.join([str(random.randint(0, 99)) for _ in range(3)])
 
     user_agent = f"Mozilla/5.0 ({os}; {browser}) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/{version} Safari/537.36"
-    
+
     return user_agent
 
 async def generate_random_mac_address():
     mac_address = ':'.join(['{:02x}'.format(random.randint(0, 255)) for _ in range(6)])
-    
+
     return mac_address
 
 async def run_survey_instance():
     async with async_playwright() as p:
         user_agent = await generate_random_user_agent()
         mac_address = await generate_random_mac_address()
-        
+
         user_agent = f"{user_agent} (MacAddr {mac_address})"
-        
-        browser = await p.chromium.launch(headless=False)
+
+        browser = await p.chromium.launch(headless=HEADLESS_MODE)
         context = await browser.new_context(user_agent=user_agent)
         page = await context.new_page()
 
