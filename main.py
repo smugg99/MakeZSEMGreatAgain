@@ -57,5 +57,5 @@ async def run_survey_instance():
 async def run_multiple_instances(num_instances):
     await asyncio.gather(*[run_survey_instance() for _ in range(num_instances)])
 
-NUM_INSTANCES = 10
+NUM_INSTANCES = 2
 asyncio.run(run_multiple_instances(NUM_INSTANCES))
